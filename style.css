@@ -74,14 +74,18 @@ body {
     color: var(--secondary-color);
     transition: color 150ms ease-in-out;
 }
-.nav-item a {
+.nav-item a,
+.user-info a,
+.user-info i {
     text-decoration: none;
     color: var(--secondary-color);
     transition: color 150ms ease-in-out;
 }
 
 .nav-item:has(a:hover),
-.nav-item a:hover {
+.nav-item a:hover,
+.user-info a:hover,
+.user-info i:hover {
     color: var(--primary-color);
 }
 
@@ -96,6 +100,7 @@ body {
     grid-template-columns: 4fr 1fr 2fr;
     align-items: center;
 }
+
 
 .search-wrapper {
     background: #ffffff6b;
@@ -143,9 +148,57 @@ body {
     font-size: 1.1rem;
     font-weight: 500;
 }
+
+.user-info i {
+    cursor: pointer;
+}
+
 .user-info img {
-    width: 30px;
     height: 30px;
+}
+
+.header-bottom {
+    display: grid;
+    grid-template-columns: 1fr 5fr 3fr;
+    align-items: center;
+    gap: 20px
+}
+
+.header-bottom .profile-lrg {
+    grid-column: 1 / 2;
+    justify-self: flex-end;
+}
+
+.profile-lrg img {
+    height: 50px;
+}
+
+.header-bottom .welcome {
+    grid-column: 2 / 3;
+    color: var(--secondary-color)
+}
+
+.welcome p {
+    font-size: 0.9rem;
+}
+
+.welcome h2 {
+    font-size: 1.2rem;
+}
+
+.header-bottom .header-buttons {
+    grid-column: 3 / 4;
+    display: flex;
+    gap: 15px;
+}
+
+.header-buttons button {
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    width: 4.5rem;
+    height: 1.5rem;
+    border-radius: 999px;
 }
 
 .content {
