@@ -253,9 +253,10 @@ body {
     padding: 0px 0px 20px 20px;
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(auto-fit, 250px);
+    grid-template-columns: repeat(2, minmax(200px, 500px));
     grid-template-rows: 1fr 1fr 1fr;
     place-items: center;
+    padding-right: 20px
 }
 
 .cards .card {
